@@ -13,6 +13,7 @@
 </script>
 
 <template>
+    <router-link :to="`/portfolio/${project.slug}`">
 
   <div class="project-card">
     <h3>{{ project.title }}</h3>
@@ -23,11 +24,9 @@
     <h4>
         {{ project.client }}
     </h4>
-    <p>
 
-    </p>
   </div>
-
+</router-link>
 </template>
 
 <style scoped>

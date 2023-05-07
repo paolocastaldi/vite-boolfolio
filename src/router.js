@@ -6,6 +6,8 @@ import Portfolio from './pages/Portfolio.vue'
 
 import AboutMe from './pages/AboutMe.vue'
 
+import PortfolioShow from './pages/Portfolio.show.vue'
+
 const router = createRouter({
     history: createWebHistory(),
 	routes: [
@@ -18,6 +20,12 @@ const router = createRouter({
 			path: '/portfolio',
 			name: 'portfolio',
 			component: Portfolio,
+		},
+        {
+			path: '/portfolio/:slug',
+			name: 'portfolio.show',
+			component: PortfolioShow,
+            props: true,
 		},
         {
 			path: '/aboutMe',
